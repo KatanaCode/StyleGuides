@@ -2,4 +2,4 @@
 
 WIP
 
-- [Git Process](GIT_STRATEGY.md)
+- [Git Strategy](GIT_STRATEGY.md)
