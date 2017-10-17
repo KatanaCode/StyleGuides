@@ -1,0 +1,101 @@
+inherit_from: .rubocop_todo.yml
+
+# ==========================
+# = Configure for all cops =
+# ==========================
+AllCops:
+  UseCache: true
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  Include:
+    - '**/Rakefile'
+    - '**/config.ru'
+  Exclude:
+    - 'Gemfile'
+    - 'db/**/*'
+    - 'lib/tasks/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'vendor/**/*'
+
+# ===========
+# = Modules =
+# ===========
+Bundler:
+  Enabled: true
+  Include:
+    - 'Gemfile'
+
+Rails:
+  Enabled: true
+
+Security:
+  Enabled: true
+
+Performance:
+  Enabled: true
+
+Naming:
+  Enabled: true
+
+# ========
+# = String =
+# ========
+StringLiterals:
+  Enabled: false
+
+# ==========
+# = Layout =
+# ==========
+Layout/IndentationWidth:
+  Enabled: false
+
+Layout/EmptyLinesAroundClassBody:
+  Enabled: false
+
+Layout/EmptyLines:
+  Enabled: false
+
+Layout/EmptyLinesAroundBlockBody:
+  Exclude:
+    - 'lib/tasks/*'
+    - 'spec/**/*'
+
+# =========
+# = Style =
+# =========
+Style/RegexpLiteral:
+  Enabled: false
+
+Style/EmptyMethod:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# ===========
+# = Metrics =
+# ===========
+Metrics/MethodLength:
+  Max: 20
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - 'lib/tasks/*'
+    - 'spec/**/*'
+
+# ========
+# = Lint =
+# ========
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - 'spec/**/*'
+
+Layout/ExtraSpacing:
+  Enabled: false
+
+Layout/SpaceAroundOperators:
+  Enabled: false
